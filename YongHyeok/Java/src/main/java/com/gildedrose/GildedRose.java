@@ -1,7 +1,5 @@
 package com.gildedrose;
 
-static int MAX_QUALITY = 50;
-
 class GildedRose {
     Item[] items;
 
@@ -16,11 +14,12 @@ class GildedRose {
                 if (items[i].quality > 0) {
                     // Aged Brie도 아니고 ticket도 아닌 경우 quality 조정 로직 (Surfuras 제외) : -1
                     if (!items[i].name.equals("Sulfuras, Hand of Ragnaros")
-                        $$ !items[i].name.split(" ")[0].equals("Conjured")) {
+                        && !items[i].name.split(" ")[0].equals("Conjured")) {
                         items[i].quality = items[i].quality - 1;
                     }
-                    else {items[i].name.split(" ")[0].equals("Conjured")) {
+                    else if (items[i].name.split(" ")[0].equals("Conjured")) {
                         items[i].quality = items[i].quality - 2;
+                }
                 }
                 // Aged Brie 및 ticket에 대하여 부가적인 quality 조정 로직 (기본적으로 quality는 +1이며 티켓인 경우 기한에 따라서 추가적으로 +1씩 더 증가)
             } else {
