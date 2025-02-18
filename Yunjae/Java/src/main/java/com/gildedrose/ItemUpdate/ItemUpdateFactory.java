@@ -2,6 +2,7 @@ package com.gildedrose.ItemUpdate;
 
 import com.gildedrose.*;
 
+//ItemUpdateFactory는 싱글톤 패턴 적용해도 괜찮을듯
 public class ItemUpdateFactory {
 
     public static ItemUpdate getItemUpdate(Item item) {
@@ -29,3 +30,4 @@ public class ItemUpdateFactory {
 //        return strategies.getOrDefault(item.name, new DefaultItemStrategy());
 //    }
 //}
+
