@@ -6,6 +6,12 @@ public class AgedBrieUpdate implements ItemUpdate{
 
     @Override
     public void update(Item item) {
-        //implementation
+
+        item.sellIn--;
+
+        if (item.quality < 50) {
+            item.quality++;
+        }
+
     }
 }

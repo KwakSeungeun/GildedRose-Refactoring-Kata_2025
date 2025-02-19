@@ -6,6 +6,13 @@ public class DefaultUpdate implements ItemUpdate{
 
     @Override
     public void update(Item item) {
-        //implmentation
+
+        item.sellIn--;
+        if (item.quality > 0) {
+            item.quality--;
+            if (item.sellIn < 0) {
+                item.quality--;
+            }
+        }
     }
 }
