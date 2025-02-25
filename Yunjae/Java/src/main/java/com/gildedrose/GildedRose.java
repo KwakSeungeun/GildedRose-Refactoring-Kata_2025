@@ -1,4 +1,5 @@
 package com.gildedrose;
+import com.gildedrose.ItemUpdate.ItemUpdateFactory;
 
 //class GildedRose {
 //    Item[] items;
@@ -61,7 +62,7 @@ package com.gildedrose;
 //    }
 //}
 
-import com.gildedrose.ItemUpdate.ItemUpdateFactory;
+
 
 public class GildedRose {
     Item[] items;

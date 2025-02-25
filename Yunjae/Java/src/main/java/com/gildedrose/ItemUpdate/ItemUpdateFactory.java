@@ -9,7 +9,7 @@ public class ItemUpdateFactory {
         switch (item.name) {
             case "Aged Brie": return new AgedBrieUpdate();
             case "Backstage passes to a TAFKAL80ETC concert": return new BackStageUpdate();
-            case "Sulfuras": return new SulfurasUpdate();
+            case "Sulfuras, Hand of Ragnaros": return new SulfurasUpdate();
             default: return new DefaultUpdate();
 
         }
